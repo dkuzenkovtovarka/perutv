@@ -1,0 +1,2685 @@
+/*! CSS Used from: https://www.thehindu.com/theme/css/th-online/bootstrap.min.css?ver=1697972684 */
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ol,
+ul {
+    padding-left: 2rem;
+}
+
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #0a58ca;
+}
+
+img {
+    vertical-align: middle;
+}
+
+button {
+    border-radius: 0;
+}
+
+button:focus:not(:focus-visible) {
+    outline: 0;
+}
+
+button {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button {
+    text-transform: none;
+}
+
+[type=button],
+button {
+    -webkit-appearance: button;
+}
+
+[type=button]:not(:disabled),
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width:1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+@media (min-width:768px) {
+    .col-md-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+@media (min-width:992px) {
+    .col-lg-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
+    .col-lg-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+}
+
+@media (min-width:1200px) {
+    .col-xl-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
+    .col-xl-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .btn {
+        transition: none;
+    }
+}
+
+.btn:hover {
+    color: #212529;
+}
+
+.btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
+.btn:disabled {
+    pointer-events: none;
+    opacity: .65;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .nav-link {
+        transition: none;
+    }
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #0a58ca;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+@media (min-width:992px) {
+    .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, .55);
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(0, 0, 0, .7);
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0;
+    margin-bottom: 1rem;
+    list-style: none;
+}
+
+.breadcrumb-item+.breadcrumb-item {
+    padding-left: .5rem;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+    padding-right: .5rem;
+    color: #6c757d;
+    content: var(--bs-breadcrumb-divider, "/");
+}
+
+.align-items-end {
+    align-items: flex-end !important;
+}
+
+.me-auto {
+    margin-right: auto !important;
+}
+
+.pt-1 {
+    padding-top: .25rem !important;
+}
+
+.pt-2 {
+    padding-top: .5rem !important;
+}
+
+.pb-2 {
+    padding-bottom: .5rem !important;
+}
+
+@media (min-width:992px) {
+    .mb-lg-0 {
+        margin-bottom: 0 !important;
+    }
+}
+
+/*! CSS Used from: https://www.thehindu.com/theme/css/th-online.min.css?ver=1697972863 */
+* {
+    font-family: "Merriweather", serif;
+    font-weight: normal;
+}
+
+.container {
+    max-width: 1300px;
+}
+
+a,
+button {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover,
+button:hover {
+    color: inherit;
+}
+
+.menuuserdetect {
+    display: none;
+}
+
+.on-scroll .dropdown .btns {
+    display: none !important;
+}
+
+@media screen and (max-width:1040px) {
+    .on-scroll .dropdown .btns {
+        display: block !important;
+    }
+}
+
+.menu-list li.subscriberonly {
+    display: none;
+}
+
+@media print {
+
+    li.nav-item,
+    .hide-mobile {
+        display: none;
+    }
+
+    li.nav-item.scroll-logo {
+        display: block;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .menuuserdetect {
+        display: none !important;
+    }
+}
+
+.top-bar {
+    background: #000;
+    position: relative;
+    z-index: 9999;
+}
+
+.header {
+    position: absolute;
+    top: -1px;
+    z-index: 15;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.160784);
+    transition: .5s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all .3s;
+}
+
+.header-logo-cont {
+    padding: 30px 0 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+    z-index: 9999;
+    position: relative;
+    transition: .3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.header-logo-cont img {
+    height: 45px;
+    width: 475px;
+}
+
+.header-menu {
+    position: relative;
+}
+
+.navbar-inverse {
+    border: 0;
+    margin-bottom: 0;
+    padding: 30px 0 17px;
+    font-family: "Merriweather", arial;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-size: 18px;
+    font-weight: 900;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 19px;
+    border-top: 5px solid #000;
+    width: 170px;
+    position: relative;
+    padding-top: 2px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #b00020;
+    text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-item.scroll-logo {
+    display: none;
+    margin-top: -15px;
+    padding: 0;
+}
+
+.navbar-light .navbar-nav .nav-item.scroll-logo a {
+    border: 0;
+    width: auto;
+    margin-right: 15px !important;
+}
+
+.navbar-light .navbar-nav .nav-item.scroll-logo a img {
+    width: 59px;
+    height: 59px;
+}
+
+.navbar-light .navbar-nav .nav-item:last-child a {
+    margin-right: 0;
+}
+
+.navmenu-container {
+    max-width: 980px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+}
+
+.navmenu-container.main-menu {
+    z-index: 3;
+}
+
+.navmenu-container .btns {
+    position: absolute;
+    right: 3px;
+    top: 95px;
+}
+
+.navmenu-container .menu-btn {
+    position: absolute;
+    right: 4px;
+    top: 29px;
+    cursor: pointer;
+    border: 1px solid rgba(141, 141, 141, 0.6);
+    border-radius: 4px;
+    padding: 4px 6px;
+    width: 39px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+
+.navmenu-container .menu-btn .menu-hamber {
+    width: 25px;
+    height: 14px;
+}
+
+.navmenu-container .menu-btn:hover {
+    border-color: #8d8d8d;
+    background-color: rgba(141, 141, 141, 0.129412);
+}
+
+.navmenu-container .breadcrumb {
+    margin: 0;
+    padding: 30px 0 7px;
+}
+
+.navmenu-container .breadcrumb .breadcrumb-item {
+    padding-left: 4px;
+}
+
+.navmenu-container .breadcrumb .breadcrumb-item:first-child {
+    padding-left: 0;
+}
+
+.navmenu-container .breadcrumb .breadcrumb-item a {
+    color: #b00020;
+    font-size: 12px;
+    font-family: "Merriweather Sans", sans-serif;
+    text-decoration: none;
+    letter-spacing: .7px;
+}
+
+.navmenu-container .breadcrumb .breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.navmenu-container .breadcrumb .breadcrumb-item a .treanding {
+    position: relative;
+    top: -1px;
+    margin-left: 3px;
+    width: 15px;
+    height: 8px;
+}
+
+.navmenu-container .breadcrumb .breadcrumb-item::before {
+    padding-right: 7px;
+    padding-left: 3px;
+    color: #b00020;
+    font-size: 12px;
+    position: relative;
+    top: 4px;
+}
+
+.navmenu-container .breadcrumb .breadcrumb-item.search-link {
+    margin-left: 10px;
+}
+
+.navmenu-container .breadcrumb .breadcrumb-item.search-link,
+.navmenu-container .breadcrumb .breadcrumb-item.search-link a {
+    color: #333;
+    opacity: .8;
+    transition: all .2s;
+}
+
+.navmenu-container .breadcrumb .breadcrumb-item.search-link img,
+.navmenu-container .breadcrumb .breadcrumb-item.search-link a img {
+    width: 16px;
+    height: 15px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.navmenu-container .breadcrumb .breadcrumb-item.search-link:hover,
+.navmenu-container .breadcrumb .breadcrumb-item.search-link a:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.navmenu-container .breadcrumb .breadcrumb-item.search-link::before {
+    display: none;
+}
+
+.dropdown {
+    position: absolute;
+    background: #f1f1f1;
+    top: calc(100% - 66px);
+    width: 100%;
+    padding: 11px 0 20px;
+    z-index: 3;
+    box-shadow: 0 7px 6px rgba(0, 0, 0, 0.133333);
+    display: none;
+}
+
+.dropdown .navmenu-container {
+    max-width: 1004px;
+}
+
+.dropdown .btns {
+    position: unset;
+    margin: 0 0 20px;
+    text-align: right;
+    padding-right: 3px;
+}
+
+.dropdown .btns .btn-free-trial {
+    margin-left: -125px;
+}
+
+.dropdown .breadcrumb {
+    padding: 7px 0 18px !important;
+}
+
+.dropdown .btn-title {
+    font-size: 16px;
+    font-family: "Merriweather Sans", sans-serif;
+    color: #727272;
+    text-align: left;
+    margin: 10px 0 15px;
+    display: none;
+}
+
+.btn-subscribe,
+.btn-signup,
+.btn-account,
+.btn-premium,
+.btn-free-trial {
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #b00020;
+    color: #b00020;
+    font-size: 14px;
+    font-family: "Merriweather Sans", sans-serif;
+    text-transform: uppercase;
+    width: 147px;
+    padding: 9px 0 6px 0;
+    transition: ease-out .3s;
+    margin-right: 5px;
+}
+
+.btn-subscribe:hover,
+.btn-subscribe:focus,
+.btn-signup:hover,
+.btn-signup:focus,
+.btn-account:hover,
+.btn-account:focus,
+.btn-premium:hover,
+.btn-premium:focus,
+.btn-free-trial:hover,
+.btn-free-trial:focus {
+    color: #fff;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.btn-subscribe {
+    background: #b00020;
+    color: #fff;
+    transition: ease-out .3s;
+    margin-right: 10px;
+    box-shadow: inset 0 0 0 0 #fff;
+}
+
+.btn-subscribe:hover,
+.btn-subscribe:focus {
+    color: #b00020;
+    box-shadow: inset 200px 0 0 0 #fff;
+}
+
+.btn-free-trial {
+    background: none;
+    border: 0;
+    color: #000;
+    font-weight: bold;
+    width: max-content;
+    height: auto;
+    padding: 0;
+    line-height: normal;
+    margin-right: 24px;
+    position: relative;
+}
+
+.btn-free-trial::before {
+    position: absolute;
+    content: "";
+    background: url("") no-repeat center;
+    top: -5px;
+    left: -31px;
+    width: 26px;
+    height: 26px;
+    background-size: 26px auto;
+}
+
+.btn-free-trial .slider {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 95%;
+    margin: 0 auto;
+    height: 2px;
+    background-color: #b00020;
+    width: 0;
+    transition: width .3s ease;
+}
+
+.btn-free-trial:hover,
+.btn-free-trial:focus,
+.btn-free-trial:active {
+    color: #000;
+}
+
+.btn-free-trial:hover .slider,
+.btn-free-trial:focus .slider,
+.btn-free-trial:active .slider {
+    width: 100%;
+}
+
+.btn-signup {
+    transition: ease-out .3s;
+    box-shadow: inset 0 0 0 0 #b00020;
+    margin-right: 0;
+}
+
+.btn-signup:hover,
+.btn-signup:focus {
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 #b00020;
+}
+
+.btn-account {
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+    margin-right: 0;
+    transition: ease-out .3s;
+    box-shadow: inset 0 0 0 0 #000;
+}
+
+.btn-account img {
+    position: relative;
+    margin-left: 5px;
+    top: -2px;
+}
+
+.btn-account:hover,
+.btn-account:focus {
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 #000;
+}
+
+.btn-account:hover img,
+.btn-account:focus img {
+    filter: invert(1);
+}
+
+.btn-premium {
+    background: transparent;
+    border: 0;
+    position: relative;
+    font-weight: bold;
+    color: #000;
+}
+
+.btn-premium img {
+    width: 29px;
+    height: 29px;
+    margin-right: 5px;
+    top: -3px;
+    position: relative;
+}
+
+.btn-premium:disabled {
+    opacity: 1;
+}
+
+.share-article {
+    cursor: pointer;
+    position: absolute;
+    top: 41px;
+    right: 60px;
+    display: none;
+    padding: 2px 2px;
+}
+
+.share-article:hover,
+.share-article:focus {
+    box-shadow: none;
+}
+
+.hide-mobile {
+    display: block;
+}
+
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list li {
+    width: 24.5%;
+    display: inline-block;
+    font-family: "Merriweather", serif;
+    margin: 8px 0;
+}
+
+.menu-list li a {
+    font-family: "Merriweather", serif;
+    font-size: 18px;
+    color: #b00020;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.menu-list li a:hover {
+    text-decoration: underline;
+}
+
+.menu-list li a img {
+    max-width: 100%;
+    max-height: 14px;
+}
+
+.menu-list li a.see-all {
+    display: block;
+    position: relative;
+}
+
+.menu-list li a.see-all .text {
+    font-family: "Merriweather", serif;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    position: relative;
+    font-weight: bold;
+}
+
+.menu-list li a.see-all .text::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background: #000;
+    display: block;
+    transition: width .3s ease;
+}
+
+.menu-list li a.see-all:hover {
+    text-decoration: none;
+}
+
+.menu-list li a.see-all:hover .text {
+    text-decoration: none;
+}
+
+.menu-list li a.see-all:hover .text::after {
+    width: 100%;
+}
+
+.menu-list li a.see-all .arrow {
+    position: absolute;
+    top: -2px;
+    left: 110px;
+}
+
+.menu-list li a.see-all .arrow img {
+    width: 14px;
+    height: 14px;
+}
+
+.fixed-menu {
+    margin: 5px 0 0;
+}
+
+.fixed-menu .more {
+    display: none;
+}
+
+.dropdown .fixed-menu .menu-list li.sponsored>a {
+    background: rgba(0, 0, 0, 0.333333);
+    color: #fff;
+    font-size: 14px;
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 200;
+    letter-spacing: .7px;
+    padding: 6px 10px 5px;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+
+p.connect-us {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 12px;
+    color: #000;
+    text-align: left;
+    margin: 0 5px 0 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-link {
+    margin: 0 0 20px;
+}
+
+.header-link a {
+    text-decoration: none;
+    font-family: "Merriweather", serif;
+    font-size: 18px;
+    color: #000;
+    padding-left: 25px;
+    margin-right: 20px;
+    position: relative;
+    display: inline-block;
+    width: max-content;
+    transition: all .3s ease-out;
+}
+
+.header-link a .slider {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 95%;
+    margin: 0 auto;
+    height: 1px;
+    background-color: #000;
+    width: 0;
+    -webkit-transition: width .3s ease;
+    transition: width .3s ease;
+}
+
+.header-link a:hover {
+    text-decoration: none;
+}
+
+.header-link a:hover .slider {
+    width: 100%;
+}
+
+.header-link .paper {
+    background: url("") 0 2px no-repeat;
+    padding-left: 27px;
+}
+
+.header-link .newsletter {
+    background: url("") 0 2px no-repeat;
+    padding-left: 30px;
+}
+
+.header-link .showcase {
+    background: url("") 0 2px no-repeat;
+    padding-left: 30px;
+}
+
+.social-icons {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 0;
+    vertical-align: middle;
+}
+
+.social-icons li a {
+    display: block;
+    margin: 0 1px;
+    outline: none;
+    text-decoration: none;
+    transition: all .3s;
+    opacity: .8;
+}
+
+.social-icons li a:hover,
+.social-icons li a:active,
+.social-icons li a:focus {
+    outline: none;
+}
+
+.social-icons li a:hover {
+    opacity: 1;
+}
+
+.social-icons li a img {
+    position: relative;
+    top: -1px;
+    left: 0;
+    width: 38px;
+    height: 31px;
+}
+
+.on-scroll {
+    position: fixed;
+    top: -1px;
+}
+
+.on-scroll .desktop .header-logo-cont {
+    display: none;
+}
+
+.on-scroll .navmenu-container {
+    max-width: 1280px;
+}
+
+.on-scroll .navbar-inverse {
+    padding: 20px 0 0;
+}
+
+.on-scroll .navbar-light .navbar-nav .nav-item.scroll-logo {
+    display: block;
+}
+
+.on-scroll .navbar-light .navbar-nav .nav-item .nav-link {
+    border-top: 0;
+    margin-right: 25px;
+    width: auto;
+}
+
+.on-scroll .breadcrumb {
+    display: none;
+}
+
+.on-scroll .navmenu-container .btns {
+    position: absolute;
+    right: 55px;
+    top: 18px;
+}
+
+.on-scroll .menu-btn {
+    top: 20px;
+}
+
+.on-scroll .dropdown {
+    padding-top: 5px;
+    top: 70px;
+}
+
+.on-scroll .dropdown .breadcrumb {
+    display: flex;
+}
+
+.on-scroll .dropdown .btns {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+.dropdown-logo {
+    display: none;
+    position: fixed;
+    top: 5px;
+    z-index: 4;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.133333);
+    left: 0;
+    top: 0;
+    padding: 5px 0;
+}
+
+.hide-system {
+    display: none;
+}
+
+.mobile {
+    position: relative;
+}
+
+.mobile .scroll-outer {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    padding: 0 18px;
+}
+
+.mobile .breadcrumb {
+    background: #fff;
+    margin: 0;
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding: 0;
+    scroll-behavior: smooth;
+    display: block;
+    left: 18px;
+    right: unset;
+}
+
+.mobile .breadcrumb::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile .breadcrumb::after {
+    content: "";
+    width: 97px;
+    height: 100%;
+    display: block;
+    background: linear-gradient(270deg, #fff 80%, transparent);
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.mobile .breadcrumb .breadcrumb-item {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.mobile .breadcrumb .breadcrumb-item:nth-last-child(2) {
+    padding-right: 80px;
+}
+
+.mobile .breadcrumb .breadcrumb-item a {
+    color: #B00020;
+}
+
+.mobile .breadcrumb .breadcrumb-item a .treanding {
+    margin-left: 3px;
+}
+
+.mobile .breadcrumb .search-link {
+    position: absolute;
+    right: 18px;
+    top: 2px;
+    z-index: 2;
+}
+
+.mobile .breadcrumb .search-link,
+.mobile .breadcrumb .search-link a {
+    color: #333;
+    content: "";
+}
+
+.mobile .breadcrumb .search-link::before {
+    display: none;
+}
+
+.mobile .breadcrumb .search-link img {
+    margin-left: 3px;
+    margin-top: -1px;
+    width: 12px;
+    height: 12px;
+}
+
+.dropdown .mani-menu {
+    display: none;
+}
+
+@media screen and (max-width:1040px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .header {
+        transition: none;
+    }
+
+    .header-menu {
+        width: 100%;
+        margin-top: -1px;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .hide-system {
+        display: block;
+    }
+
+    .xs-reverse-dropdown {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .header-logo-cont {
+        margin: 0;
+        text-align: left;
+        z-index: 0;
+        width: 60%;
+        max-width: 300px;
+        padding: 0 0 13px;
+    }
+
+    .header-logo-cont .mobile-logo {
+        width: auto;
+        height: auto;
+    }
+
+    .btn-subscribe {
+        font-size: 10px;
+        border-radius: 0;
+        width: 70px;
+        margin: 0;
+        padding: 2px 0 1px 0;
+    }
+
+    .menu-btn {
+        position: absolute;
+        top: 44px;
+        right: 18px;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+    }
+
+    .menu-btn .menu-hamber {
+        width: 25px;
+        height: 14px;
+    }
+
+    .btns .btn-subscribe {
+        position: absolute;
+        top: 48px;
+        right: 58px;
+    }
+
+    .btns .btn-premium {
+        position: absolute;
+        top: 14px;
+        right: 18px;
+        width: 82px;
+        text-align: right;
+        font-size: 10px;
+        padding: 0;
+        height: 20px;
+        z-index: 2;
+        margin: 0;
+    }
+
+    .btns .btn-premium img {
+        width: 20px;
+        height: auto;
+        top: -1px;
+    }
+
+    header .container {
+        margin-left: 0;
+    }
+
+    .navbar {
+        position: unset;
+        margin: 0;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        padding: 0;
+        position: relative;
+    }
+
+    .navbar-nav .nav-item {
+        display: inline-block;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        border: 0;
+        font-size: 18px;
+        color: #b00020;
+        font-weight: bold;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.145098);
+    }
+
+    .menu-list li a {
+        text-decoration: none;
+    }
+
+    .menu-list li a:hover,
+    .menu-list li a:focus {
+        text-decoration: none;
+    }
+
+    .menu-list li a.see-all .arrow {
+        top: 8px;
+    }
+
+    .menu-list li a.see-all .text::after {
+        display: none;
+    }
+
+    .fixed-menu {
+        padding: 20px 15px 0;
+    }
+
+    .fixed-menu .menu-list li {
+        width: 49%;
+        margin: 8px 0;
+    }
+
+    .fixed-menu .menu-list li a {
+        color: #7d7e82;
+        font-family: "Merriweather Sans", sans-serif;
+    }
+
+    .dropdown {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        position: fixed;
+        overflow-y: scroll;
+    }
+
+    .dropdown::-webkit-scrollbar {
+        display: none;
+    }
+
+    .dropdown .dropdown-logo {
+        display: block;
+    }
+
+    .dropdown .dropdown-logo .logo img {
+        width: 60%;
+        max-width: 280px;
+        padding: 13px 0 11px 12px;
+    }
+
+    .dropdown .breadcrumb {
+        display: none;
+    }
+
+    .dropdown .btns {
+        padding: 0 15px;
+        margin-top: 70px;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .dropdown .btns .btn-title {
+        display: block;
+    }
+
+    .dropdown .btns .btn-free-trial {
+        display: none;
+    }
+
+    .dropdown .btns .btn {
+        font-size: 14px;
+        width: 47%;
+        padding: 9px 0 6px 0;
+        transition: all .3s;
+        border-radius: 3px;
+    }
+
+    .dropdown .btns .btn.btn-subscribe {
+        position: unset;
+        margin-right: 4%;
+    }
+
+    .dropdown .btns .btn.btn-signup,
+    .dropdown .btns .btn.btn-account {
+        position: unset;
+        margin-right: 0;
+    }
+
+    .dropdown .btns .btn:hover,
+    .dropdown .btns .btn:focus {
+        outline: none;
+    }
+
+    .dropdown .btns .btn.btn-premium {
+        position: unset;
+        font-size: inherit;
+        width: 47%;
+        text-align: center;
+        font-size: 14px;
+        height: inherit;
+        top: 0;
+        right: inherit;
+        left: inherit;
+        padding: 7px 0;
+        margin-right: 4%;
+    }
+
+    .dropdown .btns .btn.btn-premium img {
+        width: 25px;
+        height: auto;
+    }
+
+    .dropdown .fixed-menu {
+        padding: 10px 15px 0;
+    }
+
+    .dropdown .fixed-menu .menu-list li {
+        width: 49%;
+        margin: 0 0;
+    }
+
+    .dropdown .fixed-menu .menu-list li a {
+        color: #b00020;
+        font-family: "Merriweather", serif;
+        border-top: 1px solid #aaa;
+        width: 90%;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .dropdown .fixed-menu .menu-list li:first-child a,
+    .dropdown .fixed-menu .menu-list li:nth-child(2) a {
+        border-top: 1px solid transparent;
+    }
+
+    .dropdown .fixed-menu .menu-list.more li a {
+        border-top: 1px solid #aaa;
+    }
+
+    .dropdown .header-link {
+        margin-top: 15px;
+        padding: 0 15px;
+    }
+
+    .dropdown .header-link .paper,
+    .dropdown .header-link .newsletter {
+        margin: 7px 0;
+        margin-right: 20px;
+        padding-left: 30px;
+    }
+
+    .dropdown .header-link .paper,
+    .dropdown .header-link .newsletter,
+    .dropdown .header-link .showcase {
+        margin: 7px 0;
+        margin-right: 20px;
+        padding-left: 30px;
+    }
+
+    .dropdown .connect-us {
+        padding: 0 15px;
+        margin: 10px 0 0;
+        display: block;
+    }
+
+    .dropdown .social-icons {
+        padding: 0 15px;
+        margin: 10px 0 0;
+    }
+
+    .dropdown .social-icons li {
+        margin: 0 5px 0 0;
+    }
+
+    .dropdown .social-icons li:last-child {
+        margin: 0;
+    }
+
+    .dropdown .social-icons li a {
+        margin: 0;
+    }
+
+    .dropdown .social-icons li a img {
+        top: 0;
+        left: 0;
+        width: 35px;
+        height: auto;
+    }
+
+    .on-scroll {
+        transition: transform 700ms;
+        top: 0;
+    }
+
+    .on-scroll .navbar-inverse {
+        padding: 15px 0 3px;
+    }
+
+    .on-scroll .breadcrumb {
+        display: flex;
+    }
+
+    .on-scroll .mobile .breadcrumb {
+        box-shadow: 0 5px 6px rgba(0, 0, 0, 0.160784);
+        bottom: -33px;
+        padding: 0 18px 10px;
+        display: none;
+    }
+
+    .on-scroll .menu-btn {
+        top: 44px;
+    }
+
+    .on-scroll .dropdown {
+        top: 0;
+        left: 0;
+        background: #fff;
+    }
+
+    .on-scroll .dropdown .btns {
+        display: block;
+        position: unset;
+    }
+
+    .on-scroll .dropdown .breadcrumb {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1040px) and (min-width:450px) {
+    .hide-system {
+        display: none;
+    }
+
+    .hide-mobile {
+        display: block;
+    }
+}
+
+.header.logout .btn-premium {
+    display: none;
+}
+
+.header.logout .btn-subscribe {
+    display: inline-block;
+}
+
+.header.logout .btn-signup {
+    display: inline-block;
+}
+
+.header.logout .btn-account {
+    display: none;
+}
+
+@media screen and (max-width:500px) {
+    .header-logo-cont .mobile-logo {
+        width: 194px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .container.mobile {
+        padding: 0 12px;
+    }
+
+    .header-logo-cont {
+        width: 55%;
+        max-width: 300px;
+    }
+
+    .btn-subscribe {
+        font-size: 8px;
+        border-radius: 0;
+        width: 60px;
+        margin: 0;
+        padding: 1px 0 1px 0;
+    }
+
+    .btns .btn-premium {
+        position: absolute;
+        width: 80px;
+        font-size: 10px;
+    }
+
+    .btns .btn-premium img {
+        width: 17px;
+        height: auto;
+        margin-right: 4px;
+    }
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 0;
+    position: relative;
+    z-index: 0;
+}
+
+.top-bar .top-bar-btns {
+    height: 24px;
+}
+
+.top-bar .btn {
+    width: max-content;
+    font-size: 10px;
+    padding: 2px 7px;
+    margin: 0 0;
+}
+
+.top-bar .btn.read-in-app {
+    border: 0;
+    background: none;
+    padding: 4px 0;
+    margin: none;
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 11px;
+}
+
+.top-bar .btn.read-in-app img {
+    margin-left: 5px;
+    width: 7px;
+    height: 7px;
+}
+
+.top-bar .btn.read-in-app:hover,
+.top-bar .btn.read-in-app:focus {
+    box-shadow: none;
+}
+
+.top-bar .btn.btn-free-trial {
+    margin-right: 7px;
+    padding: 0 0;
+}
+
+.top-bar .btn.btn-free-trial::before {
+    top: -3px;
+    left: -23px;
+    width: 18px;
+    height: 18px;
+    background-size: 18px auto;
+}
+
+.top-bar .btn.btn-account img {
+    width: 10px;
+    height: 10px;
+    top: -1px;
+}
+
+@media screen and (max-width:1181px) and (min-width:1041px) {
+    .desktop {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width:1040px) {
+    .dropdown .mani-menu {
+        display: block;
+        padding: 10px 15px 0;
+    }
+
+    .dropdown .mani-menu .navbar-nav {
+        display: block;
+        width: 100%;
+        white-space: normal;
+    }
+
+    .dropdown .mani-menu .navbar-nav .nav-item {
+        width: 49%;
+        margin: 0 0;
+    }
+}
+
+.menu-todays-paper {
+    margin: 20px 0 0;
+}
+
+.menu-todays-paper .paper {
+    width: 100%;
+    min-height: unset;
+    position: relative;
+    --bs-aspect-ratio: calc(9 / 16 * 100%);
+}
+
+.menu-todays-paper .paper::before {
+    display: block;
+    padding-top: var(--bs-aspect-ratio);
+    content: "";
+}
+
+.menu-todays-paper .paper>* {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-todays-paper .paper img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    height: 100%;
+}
+
+.menu-todays-paper .small-link {
+    margin: 20px auto 0;
+    display: block;
+}
+
+.header-link {
+    transition: all .3s;
+    margin-top: -60px;
+}
+
+@media screen and (max-width:570px) {
+    .menu-todays-paper {
+        margin: 15px 0 5px;
+    }
+
+    .menu-todays-paper .paper {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:1040px) and (min-width:571px) {
+    .menu-todays-paper {
+        margin: 30px 0 0;
+    }
+
+    .menu-todays-paper .paper {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+.header {
+    transition: all .5s;
+}
+
+.header-move {
+    position: fixed;
+}
+
+@media screen and (max-width:1040px) and (min-width:1px) {
+    .header-move .breadcrumb {
+        display: none;
+    }
+}
+
+.dropdown .mani-menu .navbar-nav .nav-item.scroll-logo {
+    display: none;
+}
+
+a,
+button {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover,
+button:hover {
+    color: inherit;
+}
+
+/*! CSS Used from: https://www.thehindu.com/theme/css/THRX/common-styles.min.css?ver=1697973028 */
+.container {
+    max-width: 1300px;
+}
+
+a,
+button {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover,
+button:hover {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.small-link {
+    font-size: 14px;
+    color: #000;
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: bold;
+    margin: 20px 0;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    width: max-content;
+    text-transform: uppercase;
+    padding: 0;
+    transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    border-bottom: solid transparent 5px;
+}
+
+.small-link .slider {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 95%;
+    margin: 0 auto;
+    height: 1px;
+    background-color: #000;
+    width: 100%;
+    transition: width .3s ease;
+}
+
+.small-link:hover {
+    text-decoration: none;
+}
+
+.small-link:hover .slider {
+    width: 0;
+}
+
+.breadcrumb .breadcrumb-item a {
+    text-decoration: none;
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 11px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.breadcrumb .breadcrumb-item::before {
+    font-size: 10px;
+    top: 6px;
+    position: relative;
+    padding-right: 5px;
+    right: 1px;
+}
+
+@media screen and (max-width:570px) {
+    .container {
+        padding: 0 18px;
+        width: 100%;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1000px) and (min-width:571px) {
+    .hide-mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width:1181px) and (min-width:1001px) {
+    .small-link {
+        margin-bottom: 20px;
+    }
+}
+
+@media not all and (min-resolution:.001dpcm) {
+    @media screen and (max-width:570px) {
+        .hide-mobile {
+            display: none;
+            height: 0;
+            visibility: hidden;
+            max-height: 0;
+        }
+    }
+}
+
+@media screen and (max-width:570px) {
+    .small-link {
+        font-size: 12px;
+    }
+}
+
+a span {
+    font-weight: inherit;
+    font-family: inherit;
+}
+
+/*! CSS Used from: https://www.thehindu.com/theme/css/THRX/home.min.css?ver=1697973020 */
+.container {
+    max-width: 1300px;
+}
+
+a,
+button {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover,
+button:hover {
+    text-decoration: underline;
+    color: inherit;
+}
+
+@media screen and (max-width:570px) {
+    .container {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 18px;
+    }
+}
+
+/*! CSS Used fontfaces */
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR7lXff1jvzRPA.woff2") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR7lXff8jvzRPA.woff2") format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR7lXff3jvzRPA.woff2") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR7lXff2jvzRPA.woff2") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR7lXff4jvw.woff2") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("u-4m0qyriQwlOrhSvowK_l5-eRZDf-LHrw.woff2") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("u-4m0qyriQwlOrhSvowK_l5-eRZKf-LHrw.woff2") format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("u-4m0qyriQwlOrhSvowK_l5-eRZBf-LHrw.woff2") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("u-4m0qyriQwlOrhSvowK_l5-eRZAf-LHrw.woff2") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("u-4m0qyriQwlOrhSvowK_l5-eRZOf-I.woff2") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR71Wvf1jvzRPA.woff2") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR71Wvf8jvzRPA.woff2") format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR71Wvf3jvzRPA.woff2") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR71Wvf2jvzRPA.woff2") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR71Wvf4jvw.woff2") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR7NWPf1jvzRPA.woff2") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR7NWPf8jvzRPA.woff2") format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR7NWPf3jvzRPA.woff2") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR7NWPf2jvzRPA.woff2") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url("u-4l0qyriQwlOrhSvowK_l5-eR7NWPf4jvw.woff2") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l521wRZVcf6lvg.woff2") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l521wRZXMf6lvg.woff2") format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l521wRZV8f6lvg.woff2") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l521wRZVsf6lvg.woff2") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l521wRZWMf6.woff2") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("u-440qyriQwlOrhSvowK_l5-cSZMZ-Y.woff2") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("u-440qyriQwlOrhSvowK_l5-eCZMZ-Y.woff2") format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("u-440qyriQwlOrhSvowK_l5-cyZMZ-Y.woff2") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("u-440qyriQwlOrhSvowK_l5-ciZMZ-Y.woff2") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("u-440qyriQwlOrhSvowK_l5-fCZM.woff2") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l52xwNZVcf6lvg.woff2") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l52xwNZXMf6lvg.woff2") format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l52xwNZV8f6lvg.woff2") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l52xwNZVsf6lvg.woff2") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l52xwNZWMf6.woff2") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l52_wFZVcf6lvg.woff2") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l52_wFZXMf6lvg.woff2") format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l52_wFZV8f6lvg.woff2") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l52_wFZVsf6lvg.woff2") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("u-4n0qyriQwlOrhSvowK_l52_wFZWMf6.woff2") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 800;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 800;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 800;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: italic;
+    font-weight: 800;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
